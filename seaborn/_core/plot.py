@@ -773,8 +773,8 @@ class Plot:
 
     def label(
         self, *,
-        title: str | None = None,
-        legend: str | None = None,
+        title: str | Callable[[str], str] | None = None,
+        legend: str | Callable[[str], str] | None = None,
         **variables: str | Callable[[str], str]
     ) -> Plot:
         """
